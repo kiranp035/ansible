@@ -1,0 +1,5 @@
+- hosts: all
+  tasks: 
+    - name: print factor grid
+      debug: 
+        msg: "factor grid = {{ facter_gid }}"

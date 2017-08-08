@@ -1,0 +1,10 @@
+- hosts: all
+  become: yes
+  vars_prompt:
+    - name: packname 
+      prompt: "enter the package name you want to install"
+  tasks: 
+    - name: "install {{ packname }}"   
+      package:
+        name: "{{ packname }}"
+        state: installed

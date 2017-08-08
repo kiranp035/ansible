@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes
+  vars:
+    packname: gcc
+  tasks:
+    - name: intalling a package using variable
+      package:
+        name: "{{ packname }}"
+        state: installed
